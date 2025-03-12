@@ -19,7 +19,7 @@ export default function Home() {
             </header>
 
             <div>
-                balls 2
+                kmskms
             </div>
         </div>
     )

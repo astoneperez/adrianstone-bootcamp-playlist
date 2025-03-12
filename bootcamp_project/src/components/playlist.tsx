@@ -2,8 +2,8 @@ import { Song,Playlist,PlaylistProps } from "@/types/interfaces";
   
   export function PlaylistComponent({ playlist }: PlaylistProps) {
     return (
-      <div>
-        <h2 className="text-xl font-bold">{playlist.name}</h2>
+      <div className="bg-[#1a2332]">
+        <h2 className="text-xl font-bold">{playlist.title}</h2>
         <ul>
           {playlist.songs.map((song) => (
             <li key={song.id}>

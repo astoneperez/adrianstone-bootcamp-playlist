@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-//import PlaylistComponent from "@/components/playlist";
-
+import { playlists }from "@/example_data";
 import { Geist, Geist_Mono } from "next/font/google";
+import { PlaylistComponent } from "@/components/playlist";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,8 +35,10 @@ export default function Home() {
             {/* Main Content */}
             <main className="flex-grow flex items-center justify-center">
                 {/*Tiles*/}
-                
-                <div>balls</div>
+                <div className="flex justify-center items-center min-h-screen bg-gray-100">
+                    <PlaylistComponent playlist={playlists[0]} />
+                </div>
+                <div>kms</div>
             </main>
 
             {/*Footer*/}            
