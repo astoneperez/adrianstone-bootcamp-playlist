@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import { Geist, Geist_Mono } from "next/font/google";
 
 const geistSans = Geist({
@@ -20,18 +21,22 @@ export default function Home() {
           Playlist Creator
         </div>
         <nav className="space-x-4">
-          <div className="text-white hover:text-gray-300">
+          <Link href="/" className="text-white hover:text-gray-300">
             Home
-          </div>
-          <div className="text-white hover:text-gray-300">
+          </Link>
+          <Link href="/playlists" className="text-white hover:text-gray-300">
             Playlists
-          </div>
+          </Link>
         </nav>
       </header>
 
       {/* Main Content */}
       <main className="flex-grow flex items-center justify-center">
-        <div className="bg-[#00d26a] hover:bg-[#00b85d] text-white px-6 py-2 rounded">Go to playlists</div>
+        <Link href="/playlists">
+          <button className="bg-[#00d26a] hover:bg-[#00b85d] text-white px-6 py-2 rounded">
+            Go to playlists
+          </button>
+        </Link>
       </main>
 
       {/* Footer */}
